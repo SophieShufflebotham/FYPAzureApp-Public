@@ -1,2 +1,2 @@
 # FYP Azure App - Public
- Node.js backend for FYP
+ Node.js backend for Final Year Project
