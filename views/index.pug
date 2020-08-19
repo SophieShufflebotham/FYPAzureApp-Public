@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  script(src="../javascripts/view-backends/indexBackend.js")
+  include includes/libraries.pug
+  h1= title
+  p Welcome to #{title}
+  button(onclick="clockInView()") View Clock In/Out Times
+  button(onclick="allUserView()") View All Users
+
+  

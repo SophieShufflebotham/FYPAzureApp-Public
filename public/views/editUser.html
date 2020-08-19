@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+<script src="../javascripts/webServicePaths.js"></script>
+<script src="../javascripts/view-backends/editUserBackend.js"></script>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title>FYP - User Clock-In Times</title>
+</head>
+<body onload="populateTable()">
+    <table id="editUserTable" class="table">
+        <thead>
+            <tr>
+                <th>Edit</th>
+                <th>Forename</th>
+                <th>Surname</th>
+                <th>Permissions</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-box-header"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-box-body">
+                    <button type="button" style="float:left" class="btn btn-outline-success" id="modal-add-permission" data-toggle="modal" data-target="#addPermissionModal">Add New Permission</button>
+                    <button type="button" style="float:left" class="btn btn-outline-danger" id="modal-remove-permission">Remove Selected Permissions</button>
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success" id="save-changes-button" data-dismiss="modal">Save Changes</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addPermissionModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="permission-modal-box-header"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="permission-modal-box-body">
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-success" id="add-permissions-save" onclick="addPermissionsDetermineChanges()" data-dismiss="modal">Add Selected Permissions</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button onclick="goBack()" class="btn btn-secondary">Back</button>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
